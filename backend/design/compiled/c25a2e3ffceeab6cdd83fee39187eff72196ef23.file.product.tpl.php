@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-21 05:26:30
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-22 06:29:01
          compiled from "backend\design\html\product.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12330103665c44a5a1e11570-45608376%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c25a2e3ffceeab6cdd83fee39187eff72196ef23' => 
     array (
       0 => 'backend\\design\\html\\product.tpl',
-      1 => 1548037589,
+      1 => 1548127738,
       2 => 'file',
     ),
   ),
@@ -233,7 +233,7 @@ products/<?php echo $_smarty_tpl->tpl_vars['product']->value->url;?>
                                     <label class="switch_label"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['btr']->value->general_transform, ENT_QUOTES, 'UTF-8', true);?>
 </label>
                                     <label class="switch switch-default">
-                                        <input class="switch-input" name="transformButton" value="1" type="checkbox" id="transformButton" <?php if ($_smarty_tpl->tpl_vars['product']->value->transformButton) {?>checked=""<?php }?>/>
+                                        <input class="switch-input" name="transformButton1" value="1" type="checkbox" id="transformButton" <?php if ($_smarty_tpl->tpl_vars['product']->value->transformButton) {?>checked=""<?php }?>/>
                                         <span class="switch-label"></span>
                                         <span class="switch-handle"></span>
                                     </label>

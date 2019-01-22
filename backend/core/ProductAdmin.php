@@ -22,7 +22,7 @@ class ProductAdmin extends Okay {
             $product->name = $this->request->post('name');
             $product->visible = $this->request->post('visible', 'boolean');
             $product->featured = $this->request->post('featured');
-            $product->transformButton = $this->request->post('transformButton');
+            $product->transformButton = $this->request->post('transformButton1');
             $product->brand_id = $this->request->post('brand_id', 'integer');
             $product->url = trim($this->request->post('url', 'string'));
             $product->meta_title = $this->request->post('meta_title');
@@ -102,6 +102,7 @@ class ProductAdmin extends Okay {
                 $this->design->assign('message_error', 'url_exists');
                 if(!empty($product->id)) {
                     $images = $this->products->get_images(array('product_id'=>$product->id));
+
                 }
             }
             // Не допусть URL с '-' в начале или конце
@@ -131,17 +132,23 @@ class ProductAdmin extends Okay {
                     }
 
                     $product->id = $this->products->add_product($product);
+
                     $product = $this->products->get_product($product->id);
                     $this->design->assign('message_success', 'added');
                     $update_option_function = "update_option_all_languages";
                 } else {
                     //lastModify                    
                     $this->db->query('select brand_id from __products where id=?', $product->id);
+
                     $old_bid = $this->db->result('brand_id');
                     if ($old_bid != $product->brand_id) {
                         $this->db->query('update __brands set last_modify=now() where id in(?@)', array($old_bid, $product->brand_id));
                     }
                     $this->products->update_product($product->id, $product);
+
+                        $pr= $product->trnaformButton;
+                        $this->products->update_product($product->id,  array('transformButton'=>$pr));
+
                     $product = $this->products->get_product($product->id);
                     $this->design->assign('message_success', 'updated');
                 }
@@ -153,6 +160,7 @@ class ProductAdmin extends Okay {
                     if (!empty($c_ids)) {
                         $this->db->query('update __categories set last_modify=now() where id in(?@)', $c_ids);
                     }
+
                     // Категории товара
                     $query = $this->db->placehold('DELETE FROM __products_categories WHERE product_id=?', $product->id);
                     $this->db->query($query);
@@ -260,8 +268,9 @@ class ProductAdmin extends Okay {
                     $main_category = reset($product_categories);
                     $main_image = reset($images);
                     $main_image_id = $main_image ? $main_image->id : null;
+
                     $this->products->update_product($product->id, array('main_category_id'=>$main_category->id, 'main_image_id'=>$main_image_id));
-                    
+
                     //Загрузка и удаление промо-изображений
                     // Удаление изображений
                     $spec_images = (array)$this->request->post('spec_images');
@@ -426,6 +435,9 @@ class ProductAdmin extends Okay {
             }
             $options = $temp_options;
         }
+
+        // делаем проверку на уже имеющийся transformbutton
+
         $special_images = $this->products->get_spec_images();
         $this->design->assign('special_images', $special_images);
         $this->design->assign('product', $product);

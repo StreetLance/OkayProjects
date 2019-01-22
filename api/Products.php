@@ -440,6 +440,7 @@ class Products extends Okay {
         $result = $this->languages->get_description($product, 'product');
 
         $query = $this->db->placehold("UPDATE __products SET ?% WHERE id in (?@) LIMIT ?", $product, (array)$id, count((array)$id));
+
         if($this->db->query($query)) {
             if(!empty($result->description)) {
                 $this->languages->action_description($id, $result->description, 'product', $this->languages->lang_id());

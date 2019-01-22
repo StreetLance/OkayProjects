@@ -142,7 +142,7 @@
                                 <div class="okay_switch clearfix">
                                     <label class="switch_label">{$btr->general_transform|escape}</label>
                                     <label class="switch switch-default">
-                                        <input class="switch-input" name="transformButton" value="1" type="checkbox" id="transformButton" {if $product->transformButton}checked=""{/if}/>
+                                        <input class="switch-input" name="transformButton1" value="1" type="checkbox" id="transformButton" {if $product->transformButton}checked=""{/if}/>
                                         <span class="switch-label"></span>
                                         <span class="switch-handle"></span>
                                     </label>

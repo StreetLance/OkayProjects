@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-21 14:09:09
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-22 06:00:04
          compiled from "C:\Users\Krash\Desktop\OSPanel\domains\OkayProject\design\okay_shop\html\product.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19777228885c44a5bf162561-23967832%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '74235761525f0f7dd1696fcb851fc7c535a6a22f' => 
     array (
       0 => 'C:\\Users\\Krash\\Desktop\\OSPanel\\domains\\OkayProject\\design\\okay_shop\\html\\product.tpl',
-      1 => 1548068936,
+      1 => 1548125340,
       2 => 'file',
     ),
   ),
@@ -220,9 +220,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                                     </label>
 
                                             <?php } ?>
-
                                        <?php }?>
-
                                 <?php if (!$_smarty_tpl->tpl_vars['product']->value->transformButton) {?>
                                     <select name="variant" class="fn_variant variant_select<?php if (count($_smarty_tpl->tpl_vars['product']->value->variants)<2) {?> hidden<?php }?>">
                                         <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;

@@ -107,9 +107,7 @@
                                                     </label>
 
                                             {/foreach}
-
                                        {/if}
-
                                 {if !$product->transformButton}
                                     <select name="variant" class="fn_variant variant_select{if $product->variants|count < 2  } hidden{/if}">
                                         {foreach $product->variants as $v}
