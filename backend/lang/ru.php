@@ -949,8 +949,10 @@ $backend_translations->admintooltip_edit_post = 'Редактировать но
 $backend_translations->admintooltip_edit_feature = 'Редактировать свойство';
 $backend_translations->admintooltip_add_feature = 'Добавить свойство';
 $backend_translations->admintooltip_edit_translarion = 'Редактировать перевод';
+// добавил в передаваемые в шаблон массив аргументов
 $backend_translations->admintooltip_edit_language = 'Редактировать языки';
 $backend_translations->general_transform = "Вывод 'Варианты' боксами";
+
 $backend_translations->general_transform_enable = "сделать вывод 'Варианты' боксами";
 $backend_translations->general_transform_disable = "убрать вывод 'Варианты' боксами";
 
