@@ -404,7 +404,7 @@ class Products extends Okay {
         } else {
             $filter = $this->db->placehold('AND p.url = ?', $id);
         }
-        
+        // добавил на вывод кнопку .transformButton
         $lang_sql = $this->languages->get_query(array('object'=>'product'));
         $query = "SELECT DISTINCT
                 p.id,
@@ -414,7 +414,7 @@ class Products extends Okay {
                 p.created as created,
                 p.visible,
                 p.featured,
-                p.transformButton,
+                p.transformButton, 
                 p.rating,
                 p.votes,
                 p.last_modify,
@@ -440,7 +440,6 @@ class Products extends Okay {
         $result = $this->languages->get_description($product, 'product');
 
         $query = $this->db->placehold("UPDATE __products SET ?% WHERE id in (?@) LIMIT ?", $product, (array)$id, count((array)$id));
-
         if($this->db->query($query)) {
             if(!empty($result->description)) {
                 $this->languages->action_description($id, $result->description, 'product', $this->languages->lang_id());

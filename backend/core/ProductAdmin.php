@@ -22,7 +22,7 @@ class ProductAdmin extends Okay {
             $product->name = $this->request->post('name');
             $product->visible = $this->request->post('visible', 'boolean');
             $product->featured = $this->request->post('featured');
-            $product->transformButton = $this->request->post('transformButton1');
+            $product->transformButton = $this->request->post('transformButton1');//добавляю в массив значение кнопки
             $product->brand_id = $this->request->post('brand_id', 'integer');
             $product->url = trim($this->request->post('url', 'string'));
             $product->meta_title = $this->request->post('meta_title');
@@ -145,10 +145,6 @@ class ProductAdmin extends Okay {
                         $this->db->query('update __brands set last_modify=now() where id in(?@)', array($old_bid, $product->brand_id));
                     }
                     $this->products->update_product($product->id, $product);
-
-                        $pr= $product->trnaformButton;
-                        $this->products->update_product($product->id,  array('transformButton'=>$pr));
-
                     $product = $this->products->get_product($product->id);
                     $this->design->assign('message_success', 'updated');
                 }

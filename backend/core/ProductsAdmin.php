@@ -115,11 +115,13 @@ class ProductsAdmin extends Okay {
                         $this->products->update_product($ids, array('visible'=>1));
                         break;
                     }
+                    // добавил обработку события в меню товаров 'сделать вывод варианты как боксы'"
                     case 'transform_disable': {
                         /*Выключить товар*/
                         $this->products->update_product($ids, array('transformButton'=>0));
                         break;
                     }
+                    // добавил обработку события в меню товаров 'убрать вывод варианты как боксы'"
                     case 'transform_enable': {
                         /*Включить товар*/
                         $this->products->update_product($ids, array('transformButton'=>1));

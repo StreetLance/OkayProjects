@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-22 06:00:04
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-23 13:11:01
          compiled from "C:\Users\Krash\Desktop\OSPanel\domains\OkayProject\design\okay_shop\html\product.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19777228885c44a5bf162561-23967832%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '74235761525f0f7dd1696fcb851fc7c535a6a22f' => 
     array (
       0 => 'C:\\Users\\Krash\\Desktop\\OSPanel\\domains\\OkayProject\\design\\okay_shop\\html\\product.tpl',
-      1 => 1548125340,
+      1 => 1548238068,
       2 => 'file',
     ),
   ),
@@ -199,8 +199,8 @@ px;"></span>
 cart">
                         <div class="row">
                             <div class="col-sm-6">
+                                
                                 <?php if ($_smarty_tpl->tpl_vars['product']->value->transformButton) {?>
-
                                             <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['product']->value->variants; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
@@ -240,8 +240,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                         <?php } ?>
                                     </select>
                                 <?php }?>
-
-
+                            
                             </div>
 
                             <div class="col-sm-6 fn_is_stock<?php if ($_smarty_tpl->tpl_vars['product']->value->variant->stock<1) {?> hidden<?php }?>">

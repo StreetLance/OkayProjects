@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-21 14:59:48
+<?php /* Smarty version Smarty-3.1.19-dev, created on 2019-01-23 14:58:33
          compiled from "backend\design\html\products.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18261897545c44a582f01b62-07108475%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dca72c0fb210cc87e7e9475bd74c862b899d932c' => 
     array (
       0 => 'backend\\design\\html\\products.tpl',
-      1 => 1548071988,
+      1 => 1548244712,
       2 => 'file',
     ),
   ),
@@ -303,7 +303,6 @@ $_smarty_tpl->tpl_vars['b']->_loop = true;
 </div>
                             <div class="okay_list_heading okay_list_status"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['btr']->value->general_enable, ENT_QUOTES, 'UTF-8', true);?>
 </div>
-                            
                             <div class="okay_list_heading okay_list_setting okay_list_products_setting"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['btr']->value->general_activities, ENT_QUOTES, 'UTF-8', true);?>
 </div>
                             <div class="okay_list_heading okay_list_close"></div>
@@ -546,6 +545,7 @@ $_smarty_tpl->tpl_vars['variant']->_loop = true;
 </option>
                                         <option value="duplicate"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['btr']->value->products_create_dublicate, ENT_QUOTES, 'UTF-8', true);?>
 </option>
+                                        // добавил выбор номанд выключить.выключить отображение в список вариантов с массовым действием.
                                         <option value="transform_enable"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['btr']->value->general_transform_enable, ENT_QUOTES, 'UTF-8', true);?>
 </option>
                                         <option value="transform_disable"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['btr']->value->general_transform_disable, ENT_QUOTES, 'UTF-8', true);?>

@@ -134,7 +134,6 @@
                             <div class="okay_list_heading okay_list_price">{$btr->general_price|escape}</div>
                             <div class="okay_list_heading okay_list_count">{$btr->general_qty|escape}</div>
                             <div class="okay_list_heading okay_list_status">{$btr->general_enable|escape}</div>
-                            {*<div class="okay_list_heading okay_list_status">{$btr->general_transform_enable|escape}</div>*}
                             <div class="okay_list_heading okay_list_setting okay_list_products_setting">{$btr->general_activities|escape}</div>
                             <div class="okay_list_heading okay_list_close"></div>
                         </div>
@@ -309,6 +308,7 @@
                                         <option value="set_feed">{$btr->general_add_xml_short|escape}</option>
                                         <option value="unset_feed">{$btr->general_from_xml_short|escape}</option>
                                         <option value="duplicate">{$btr->products_create_dublicate|escape}</option>
+                                        // добавил выбор номанд выключить.выключить отображение в список вариантов с массовым действием.
                                         <option value="transform_enable">{$btr->general_transform_enable|escape}</option>
                                         <option value="transform_disable">{$btr->general_transform_disable|escape}</option>
                                         {if $pages_count>1}

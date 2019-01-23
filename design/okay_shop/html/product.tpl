@@ -98,8 +98,8 @@
                     <form class="fn_variants" action="/{$lang_link}cart">
                         <div class="row">
                             <div class="col-sm-6">
+                                {*тут создается выбор между активныими свойтвами кнопки отображения*}
                                 {if $product->transformButton}
-
                                             {foreach $product->variants as $v}
                                                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="{$v->id}" data-price="{$v->price|convert}" data-stock="{$v->stock}"{if $v->compare_price > 0} data-cprice="{$v->compare_price|convert}"{/if}{if $v->sku} data-sku="{$v->sku|escape}"{/if} {if $v->units}data-units="{$v->units}"{/if} >
                                                     <label class="form-check-label" for="exampleRadios1">
@@ -115,8 +115,7 @@
                                         {/foreach}
                                     </select>
                                 {/if}
-
-
+                            {*конец обработки выбора*}
                             </div>
 
                             <div class="col-sm-6 fn_is_stock{if $product->variant->stock < 1} hidden{/if}">
